@@ -11,7 +11,6 @@
 
 // includes
 #include <inttypes.h>
-#include <avr/io.h>
 #include <Arduino.h>
 #include <Wire.h>
 
