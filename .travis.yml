@@ -14,7 +14,7 @@ git:
 env:
   global:
      - ARDUINO_IDE_VERSION="1.8.7"
-     - PRETTYNAME="Team Onestone TCA9548A Arduino Library"
+     - PRETTYNAME="Arduino library for the I²C Multiplexer TCA9548A"
      - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 before_install:
    - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)
