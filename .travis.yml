@@ -18,7 +18,7 @@ env:
     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 before_install:
   - sudo apt update 
-  - sudo apt upgrade -y 
+  #- sudo apt upgrade -y 
   - sudo apt install -f -y
   - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)
 install:
