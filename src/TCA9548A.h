@@ -1,10 +1,11 @@
-/*
-/////////////////////////////////////////////////////	
-/////        TCA9548A Library for Arduino	    /////
-/////	Copyright (c) 2018 by Jonas J. Merkle	/////
-/////	     Version 1.0.0 -2.11.2018- 		    /////
-/////////////////////////////////////////////////////
-*/
+/**
+ * \file bot.h
+ * \brief The header file of the Arduino library for the I²C Multiplexer TCA9548A.
+ * \author Jonas Merkle [JJM]
+ * \version 1.0.1
+ * \date 02 December 2018
+ * \license This project is released under the GNU General Public License v3.0
+ */
 
 #ifndef TCA9548A_h
 #define TCA9548A_h
@@ -17,9 +18,10 @@
 // defines
 #define STD_TCA9548A_ADDRESS 0x70
 
-////////////////////
-// TCA9548A class //
-////////////////////
+/**
+ * \class TCA9548A
+ * \brief The main class of the Arduino library for the I²C Multiplexer TCA9548A.
+ */
 class TCA9548A {
 // Begin PUBLIC ------------------------------------------------------------------
     public:
@@ -36,8 +38,6 @@ class TCA9548A {
         void disable();
         void set_port(uint8_t port);
         uint8_t get_port();
-
-        // util functions
         uint16_t get_version();
 
 // End PUBLIC --------------------------------------------------------------------
