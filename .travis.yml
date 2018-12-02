@@ -17,10 +17,10 @@ env:
     - PRETTYNAME="Arduino library for the I²C Multiplexer TCA9548A"
     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 before_install:
-  - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)
   - sudo apt update 
-  - sudo apt install -y 
+  - sudo apt upgrade -y 
   - sudo apt install -f -y
+  - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)
 install:
 script:
   - build_main_platforms
