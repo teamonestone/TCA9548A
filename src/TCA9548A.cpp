@@ -37,7 +37,7 @@ void TCA9548A::disable() {
     Wire.endTransmission();
 }
 
-void TCA9548A::setPort(uint8_t port) {
+void TCA9548A::set_port(uint8_t port) {
     // check if selected port is valid
     if (port > 7) return;
     __portTCA9548A = port;
@@ -48,6 +48,10 @@ void TCA9548A::setPort(uint8_t port) {
     Wire.endTransmission();
 }
 
-uint8_t TCA9548A::getPort() {
+uint8_t TCA9548A::get_port() {
     return __portTCA9548A;
+}
+
+uint16_t TCA9548A::get_version() {
+    return _lib_version;
 }

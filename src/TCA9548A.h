@@ -34,8 +34,11 @@ class TCA9548A {
 
         // functions
         void disable();
-        void setPort(uint8_t port);
-        uint8_t getPort();
+        void set_port(uint8_t port);
+        uint8_t get_port();
+
+        // util functions
+        uint16_t get_version();
 
 // End PUBLIC --------------------------------------------------------------------
 
@@ -43,6 +46,8 @@ class TCA9548A {
     private:
 
         // variables
+        uint16_t const _lib_version = 101;
+
         uint8_t __addressTCA9548A;
         uint8_t __portTCA9548A;
 

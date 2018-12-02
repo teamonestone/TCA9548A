@@ -1,3 +1,7 @@
+branches:
+  only:
+  - master
+  - develop
 language: c
 sudo: false
 cache:
@@ -11,19 +15,13 @@ env:
   global:
      - ARDUINO_IDE_VERSION="1.8.7"
      - PRETTYNAME="Team Onestone TCA9548A Arduino Library"
-# Optional, will default to "$TRAVIS_BUILD_DIR/Doxyfile"
-#    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
-
+     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 before_install:
    - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)
 
 install:
-   #- arduino --install-library "Adafruit ILI9341","Adafruit GFX Library"
-
 script:
    - build_main_platforms
-
-# Generate and deploy documentation
 after_success:
   #- source <(curl -SLs  https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/library_check.sh)
   #- source <(curl -SLs  https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/doxy_gen_and_deploy.sh)

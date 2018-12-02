@@ -13,9 +13,12 @@ TCA9548A	KEYWORD1
 #######################################
 
 init	KEYWORD2
+
 disable	KEYWORD2
-setPort	KEYWORD2
-getPort	KEYWORD2
+set_port	KEYWORD2
+get_port	KEYWORD2
+
+get_version KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
