@@ -3,7 +3,7 @@ branches:
   - master
   - develop
 language: c
-sudo: false
+#sudo: false
 cache:
   directories:
     - ~/arduino_ide
@@ -13,15 +13,17 @@ git:
   quiet: true
 env:
   global:
-     - ARDUINO_IDE_VERSION="1.8.7"
-     - PRETTYNAME="Arduino library for the I²C Multiplexer TCA9548A"
-     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
+    - ARDUINO_IDE_VERSION="1.8.7"
+    - PRETTYNAME="Arduino library for the I²C Multiplexer TCA9548A"
+    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 before_install:
-   - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)
-
+  - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)
+  - sudo apt update 
+  - sudo apt install -y 
+  - sudo apt install -f -y
 install:
 script:
-   - build_main_platforms
+  - build_main_platforms
 after_success:
   #- source <(curl -SLs  https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/library_check.sh)
   #- source <(curl -SLs  https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/doxy_gen_and_deploy.sh)
