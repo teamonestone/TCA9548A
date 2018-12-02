@@ -1,11 +1,39 @@
 /**
- * \file bot.cpp
- * \brief The source file of the Arduino library for the I²C Multiplexer TCA9548A.
- * \author Jonas Merkle [JJM]
- * \version 1.0.1
- * \date 02 December 2018
- * \license This project is released under the GNU General Public License v3.0
+ * @file TCA9548A.cpp
+ * @brief The source file of the Arduino library for the I²C Multiplexer TCA9548A.
+ * @author Jonas Merkle [JJM]
+ * @author
+ * This library is maintained by <a href="https://team-onestone.net">Team Onestone</a>.
+ * E-Mail: <a href="mailto:info@team-onestone.net">info@team-onestone.net</a>
+ * @version 1.0.1
+ * @date 02 December 2018
+ * @copyright This project is released under the GNU General Public License v3.0
  */
+
+/**
+ * @mainpage Arduino library for the I²C Multiplexer TCA9548A
+ *
+ * @section intro_sec Introduction
+ *
+ *
+ * @section dependencies Dependencies
+ *
+ * This library depends on the <a href="https://www.arduino.cc/en/Reference/Wire">
+ * Wire Library</a> being present on your system. Please make sure you have
+ * installed the latest version before using this library.
+ *
+ * @section author Author
+ *
+ * Written by Jonas Merkle [JJM]
+ * 
+ * This library is maintained by <a href="https://team-onestone.net">Team Onestone</a>.
+ * E-Mail: <a href="mailto:info@team-onestone.net">info@team-onestone.net</a>
+ *
+ * @section license License
+ *
+ * This project is released under the GNU General Public License v3.0
+ * 
+*/
 
 /////////////
 // include //
