@@ -1,1 +1,0 @@
-The gh-pages branch for the TCA9548A I²C Multiplexer Library
