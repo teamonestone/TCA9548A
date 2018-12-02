@@ -15,6 +15,7 @@
  *
  * @section intro_sec Introduction
  *
+ * ...
  *
  * @section dependencies Dependencies
  *
@@ -40,20 +41,35 @@
 /////////////
 #include "TCA9548A.h"
 
+/////////////
+// defines //
+/////////////
+
 //////////////////
 // constructors //
 //////////////////
 
+/**
+ * @brief Main construcor of the TCA9548A class.
+ */
 TCA9548A::TCA9548A() {
     __addressTCA9548A = STD_TCA9548A_ADDRESS;
     __portTCA9548A = 255;
 }
 
+/**
+ * @brief Constructor of the TCA9548A class with non standard i2c address.
+ * 
+ * @param address new i2c address.
+ */
 TCA9548A::TCA9548A(uint8_t address) {
     __addressTCA9548A = address;
     __portTCA9548A = 255;
 }
 
+/**
+ * @brief Main destructor  of the TCA9548A class.
+ */
 TCA9548A::~TCA9548A() {
     ;
 }
@@ -61,6 +77,10 @@ TCA9548A::~TCA9548A() {
 ///////////////////
 // init function //
 ///////////////////
+
+/**
+ * @brief Initialize the TCA9548A Multiplexer.
+ */
 void TCA9548A::init() {
     Wire.begin(0);
 }
@@ -69,6 +89,9 @@ void TCA9548A::init() {
 // functions //
 ///////////////
 
+/**
+ * @brief Disable the TCA9548A Multiplexer.
+ */
 void TCA9548A::disable() {
     __portTCA9548A = 255;
 
@@ -78,6 +101,11 @@ void TCA9548A::disable() {
     Wire.endTransmission();
 }
 
+/**
+ * @brief Select the port on which the TCA9548A Multiplexer will operate.
+ * 
+ * @param port  the port on which the TCA9548A Multiplexer will operate.
+ */
 void TCA9548A::set_port(uint8_t port) {
     // check if selected port is valid
     if (port > 7) return;
@@ -89,10 +117,20 @@ void TCA9548A::set_port(uint8_t port) {
     Wire.endTransmission();
 }
 
+/**
+ * @brief Get the current port on which the TCA9548A Multiplexer operates.
+ * 
+ * @return the current selected port on which the TCA9548A Multiplexer operates.
+ */
 uint8_t TCA9548A::get_port() {
     return __portTCA9548A;
 }
 
+/**
+ * @brief Get the version of the library.
+ * 
+ * @return the current version of the library.
+ */
 uint16_t TCA9548A::get_version() {
     return _lib_version;
 }
