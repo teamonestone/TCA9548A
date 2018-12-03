@@ -30,18 +30,18 @@ class TCA9548A {
     public:
 
         // constructors
-        TCA9548A();                     ///< Main construcor of the TCA9548A class.
-        TCA9548A(uint8_t address);      ///< Constructor of the TCA9548A class with non standard i2c address.
-        ~TCA9548A();                    ///< Main destructor  of the TCA9548A class.
+        TCA9548A();                     // Main construcor of the TCA9548A class.
+        TCA9548A(uint8_t address);      // Constructor of the TCA9548A class with non standard i2c address.
+        ~TCA9548A();                    // Main destructor  of the TCA9548A class.
 
         // init function
-        void init();                    ///< Initialize the TCA9548A Multiplexer.
+        void init();                    // Initialize the TCA9548A Multiplexer.
 
         // functions
-        void disable();                 ///< Disable the TCA9548A Multiplexer.
-        void set_port(uint8_t port);    ///< Select the port on which the TCA9548A Multiplexer will operate.
-        uint8_t get_port();             ///< Get the current port on which the TCA9548A Multiplexer operates.
-        uint16_t get_version();         ///< Get the version of the library.
+        void disable();                 // Disable the TCA9548A Multiplexer.
+        void set_port(uint8_t port);    // Select the port on which the TCA9548A Multiplexer will operate.
+        uint8_t get_port();             // Get the current port on which the TCA9548A Multiplexer operates.
+        uint16_t get_version();         // Get the version of the library.
 
 // End PUBLIC --------------------------------------------------------------------
 
