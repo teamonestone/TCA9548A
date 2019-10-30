@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['std_5ftca9548a_5faddress',['STD_TCA9548A_ADDRESS',['../_t_c_a9548_a_8h.html#ac0a9c1293afa9ef70a136a8e42ccdc5d',1,'TCA9548A.h']]]
+  ['_5ftca9548a_5flib_5fversion',['_TCA9548A_LIB_VERSION',['../_t_c_a9548_a_8h.html#a3bbd863b666eb5ffa8e43b3141c36d55',1,'TCA9548A.h']]],
+  ['_5ftca9548a_5fstd_5faddress',['_TCA9548A_STD_ADDRESS',['../_t_c_a9548_a_8h.html#aab02181ec1afb4f265ee4ec1ca636e85',1,'TCA9548A.h']]]
 ];
