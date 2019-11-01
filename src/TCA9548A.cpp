@@ -121,6 +121,15 @@ void TCA9548A::set_port(uint8_t port) {
 }
 
 /**
+ * @brief Change the adress of the TCA9548A instance.
+ * 
+ * @param port The new i2c address of the mux.
+ */
+void TCA9548A::changeAdr(uint8_t address) {
+    _addressTCA9548A = address;
+}
+
+/**
  * @brief Get the current port on which the TCA9548A Multiplexer operates.
  * 
  * @return the current selected port on which the TCA9548A Multiplexer operates.
@@ -137,3 +146,9 @@ uint8_t TCA9548A::get_port() {
 uint16_t TCA9548A::get_version() {
     return _TCA9548A_LIB_VERSION;
 }
+
+/**
+ * @brief Initialize the static instance of the mux; 
+ * 
+ */
+TCA9548A TCA9548A_Static::Instance = TCA9548A();

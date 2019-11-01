@@ -7,6 +7,8 @@
 #######################################
 
 TCA9548A	KEYWORD1
+TCA9548A_Static		KEYWORD1
+Instance	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -17,6 +19,7 @@ init	KEYWORD2
 disable	KEYWORD2
 set_port	KEYWORD2
 get_port	KEYWORD2
+changeAdr	KEYWORD2
 
 get_version KEYWORD2
 
@@ -27,3 +30,5 @@ get_version KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
+_TCA9548A_STD_ADDRESS	LITERAL1
+_TCA9548A_LIB_VERSION	LITERAL1
