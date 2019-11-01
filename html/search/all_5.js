@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['init',['init',['../class_t_c_a9548_a.html#afdf4523c05ea2d861adf1b68498ce4bf',1,'TCA9548A']]],
-  ['instance',['Instance',['../class_t_c_a9548_a___static.html#abc868cda2113425d5f9bb22ecbade832',1,'TCA9548A_Static']]]
+  ['set_5fport',['set_port',['../class_t_c_a9548_a.html#a5047370ad6e6dcf9f7f87617bdc8399c',1,'TCA9548A']]]
 ];
