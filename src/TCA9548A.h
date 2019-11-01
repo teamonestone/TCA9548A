@@ -40,11 +40,10 @@ class TCA9548A {
         void init();                    // Initialize the TCA9548A Multiplexer.
 
         // functions
-        void disable();                     // Disable the TCA9548A Multiplexer.
-        void set_port(uint8_t port);        // Select the port on which the TCA9548A Multiplexer will operate.
-        void changeAdr(uint8_t address);    // Change the adress of the TCA9548A instance.
-        uint8_t get_port();                 // Get the current port on which the TCA9548A Multiplexer operates.
-        uint16_t get_version();             // Get the version of the library.
+        void disable();                 // Disable the TCA9548A Multiplexer.
+        void set_port(uint8_t port);    // Select the port on which the TCA9548A Multiplexer will operate.
+        uint8_t get_port();             // Get the current port on which the TCA9548A Multiplexer operates.
+        uint16_t get_version();         // Get the version of the library.
 
 // End PUBLIC --------------------------------------------------------------------
 
@@ -54,27 +53,6 @@ class TCA9548A {
         // variables
         uint8_t _addressTCA9548A;
         uint8_t _portTCA9548A;
-
-// End PRIVATE -------------------------------------------------------------------
-};
-
-/**
- * @class TCA9548A_Static
- * @brief A static wrapper class for the I²C Multiplexer TCA9548A.
- */
-class TCA9548A_Static {
-// Begin PUBLIC ------------------------------------------------------------------
-    public:
-        // static instance
-        static TCA9548A Instance;     // A static instance of the TCA9548A mux.
-
-// End PUBLIC --------------------------------------------------------------------
-
-// Begin PRIVATE -----------------------------------------------------------------        
-    private:
-        // constructors
-        TCA9548A_Static();            // Main construcor of the TCA9548A_Static class.
-        ~TCA9548A_Static();           // Main destructor  of the TCA9548A_Static class.
 
 // End PRIVATE -------------------------------------------------------------------
 };
